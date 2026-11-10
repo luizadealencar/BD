@@ -1,7 +1,7 @@
 /* ==========================================================================
    O SINDICATO DOS DADOS — currículo (fonte única para index.html e caderno.html)
    UC5 · Desenvolver banco de dados · 72h · 4h/dia · seg a sex.
-   São 18 dias, de 17/08 a 10/09/2026. Feriado: 07/09.
+   São 18 dias. Datas desligadas (turma nova) — ver dataBR no fim do arquivo.
    ========================================================================== */
 window.CURRICULO = {
   repo: "SEU-USUARIO/senac_sindicato_dos_dados",
@@ -122,9 +122,13 @@ window.CURRICULO = {
     return Math.max(1, Math.min(n, total));
   },
 
+  /* Datas desligadas para a turma nova: os cards mostram so "DIA 01", sem data.
+     Para religar quando tiver o calendario, ajuste inicio/feriados acima e
+     descomente o corpo original abaixo. */
   dataBR: function(n){
-    var d = this.dataDoDia(n);
-    if (!d || isNaN(d)) return "";
-    return String(d.getDate()).padStart(2,"0") + "/" + String(d.getMonth()+1).padStart(2,"0");
+    return "";
+    /* var d = this.dataDoDia(n);
+       if (!d || isNaN(d)) return "";
+       return String(d.getDate()).padStart(2,"0") + "/" + String(d.getMonth()+1).padStart(2,"0"); */
   }
 };
